@@ -22,28 +22,28 @@
 💡 素材分析 → [📝 访谈提纲] → 📋 写作规划 → ✍️ 内容执行 → 🔍 文章审校
 ```
 
-每个阶段由独立的技能模块（SKILL.md）驱动，并设有严格的阶段门禁（Gate），前一阶段未完成且未获用户批准，不能进入下一阶段。访谈提纲阶段在素材不足时自动触发。
+每个阶段由独立的技能模块（GUIDE.md）驱动，并设有严格的阶段门禁（Gate），前一阶段未完成且未获用户批准，不能进入下一阶段。访谈提纲阶段在素材不足时自动触发。
 
 ### 2.2 技能模块总览
 
 | 阶段 | 技能模块 | 路径 | 职责 |
 |------|---------|------|------|
-| 1. 素材分析 | `brainstorming` | `skills/brainstorming/SKILL.md` | 分析素材、提取信息、评估充分度，产出写作简报 |
-| 1.5 访谈提纲 | `interview-outline` | `skills/interview-outline/SKILL.md` | 素材不足时自动触发，识别信息缺口，生成差异化访谈问题 |
-| 2. 写作规划 | `writing-article-plan` | `skills/writing-article-plan/SKILL.md` | 逐节拆分大纲，确定字数/要点/证据/过渡 |
-| 3a. 内容执行（批量） | `executing-article-plan` | `skills/executing-article-plan/SKILL.md` | 按批次（2-3 节）写作，带人工检查点 |
-| 3b. 内容执行（子代理） | `subagent-driven-writing` | `skills/subagent-driven-writing/SKILL.md` | 每节生成独立子代理，两阶段审查（规格+质量） |
-| 4. 文章审校 | `reviewing-article` | `skills/reviewing-article/SKILL.md` | 三轮审阅：内容 → 表达 → 规范 |
+| 1. 素材分析 | `brainstorming` | `skills/brainstorming/GUIDE.md` | 分析素材、提取信息、评估充分度，产出写作简报 |
+| 1.5 访谈提纲 | `interview-outline` | `skills/interview-outline/GUIDE.md` | 素材不足时自动触发，识别信息缺口，生成差异化访谈问题 |
+| 2. 写作规划 | `writing-article-plan` | `skills/writing-article-plan/GUIDE.md` | 逐节拆分大纲，确定字数/要点/证据/过渡 |
+| 3a. 内容执行（批量） | `executing-article-plan` | `skills/executing-article-plan/GUIDE.md` | 按批次（2-3 节）写作，带人工检查点 |
+| 3b. 内容执行（子代理） | `subagent-driven-writing` | `skills/subagent-driven-writing/GUIDE.md` | 每节生成独立子代理，两阶段审查（规格+质量） |
+| 4. 文章审校 | `reviewing-article` | `skills/reviewing-article/GUIDE.md` | 三轮审阅：内容 → 表达 → 规范 |
 
 ### 2.3 技能调用链
 
 ```
 SKILL.md（入口）
-  └─→ brainstorming/SKILL.md
-        └─→ writing-article-plan/SKILL.md
-              ├─→ executing-article-plan/SKILL.md（批量模式）
-              └─→ subagent-driven-writing/SKILL.md（子代理模式）
-                    └─→ reviewing-article/SKILL.md
+  └─→ brainstorming/GUIDE.md
+        └─→ writing-article-plan/GUIDE.md
+              ├─→ executing-article-plan/GUIDE.md（批量模式）
+              └─→ subagent-driven-writing/GUIDE.md（子代理模式）
+                    └─→ reviewing-article/GUIDE.md
 ```
 
 ---
@@ -61,17 +61,17 @@ story-workshop/
 │       └── typescript-blog-post.md        # 完整的四阶段写作示例
 └── skills/
     ├── brainstorming/
-    │   └── SKILL.md                       # 阶段 1：素材分析与写作简报
+    │   └── GUIDE.md                       # 阶段 1：素材分析与写作简报
     ├── interview-outline/
-    │   └── SKILL.md                       # 阶段 1.5：访谈提纲生成（素材不足时）
+    │   └── GUIDE.md                       # 阶段 1.5：访谈提纲生成（素材不足时）
     ├── writing-article-plan/
-    │   └── SKILL.md                       # 阶段 2：详细大纲规划
+    │   └── GUIDE.md                       # 阶段 2：详细大纲规划
     ├── executing-article-plan/
-    │   └── SKILL.md                       # 阶段 3a：批量执行模式
+    │   └── GUIDE.md                       # 阶段 3a：批量执行模式
     ├── subagent-driven-writing/
-    │   └── SKILL.md                       # 阶段 3b：子代理驱动模式
+    │   └── GUIDE.md                       # 阶段 3b：子代理驱动模式
     └── reviewing-article/
-        └── SKILL.md                       # 阶段 4：多轮系统审阅
+        └── GUIDE.md                       # 阶段 4：多轮系统审阅
 ```
 
 ### 文件统计
@@ -79,14 +79,14 @@ story-workshop/
 | 文件 | 行数 | 大小 |
 |------|------|------|
 | `examples/typescript-blog-post.md` | 632 | 15.7 KB |
-| `skills/reviewing-article/SKILL.md` | 382 | 9.3 KB |
+| `skills/reviewing-article/GUIDE.md` | 382 | 9.3 KB |
 | `README.md` | 336 | 10.3 KB |
-| `skills/subagent-driven-writing/SKILL.md` | 276 | 7.8 KB |
+| `skills/subagent-driven-writing/GUIDE.md` | 276 | 7.8 KB |
 | `SKILL.md` | 273 | 8.0 KB |
 | `SUMMARY.md` | 263 | — |
-| `skills/writing-article-plan/SKILL.md` | 214 | 5.6 KB |
-| `skills/executing-article-plan/SKILL.md` | 201 | 5.3 KB |
-| `skills/brainstorming/SKILL.md` | 137 | 5.4 KB |
+| `skills/writing-article-plan/GUIDE.md` | 214 | 5.6 KB |
+| `skills/executing-article-plan/GUIDE.md` | 201 | 5.3 KB |
+| `skills/brainstorming/GUIDE.md` | 137 | 5.4 KB |
 | **总计** | **~2,714** | — |
 
 ---
@@ -105,7 +105,7 @@ story-workshop/
 
 ### 技能文件格式
 
-每个 SKILL.md 采用统一结构：
+每个技能模块（GUIDE.md）采用统一结构：
 
 - **YAML Frontmatter**：定义 `name`（技能名称）和 `description`（触发描述）
 - **Markdown 正文**：流程说明、检查清单、模板

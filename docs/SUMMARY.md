@@ -39,7 +39,7 @@ story-workshop/
    - 分析素材充分度，信息不足时自动触发访谈提纲
    - 设有硬性门禁（HARD-GATE）：简报必须获批后才能进入下一阶段
 
-2. **📋 大纲规划** (`writing-article-plan/SKILL.md`)
+2. **📋 大纲规划** (`writing-article-plan/GUIDE.md`)
    - 逐节拆分文章大纲
    - 确定字数、要点、论据需求
    - 制定调研清单
@@ -154,7 +154,7 @@ Agent 会自动引导你走完全部四个阶段。
 
 ### 技能文件
 
-1. **brainstorming/SKILL.md**
+1. **brainstorming/GUIDE.md**
    - 问题驱动的选题探索
    - 简报模板与格式
    - 硬性门禁机制
@@ -179,7 +179,7 @@ Agent 会自动引导你走完全部四个阶段。
    - 两阶段审查流程
    - 进度追踪
 
-6. **reviewing-article/SKILL.md**
+6. **reviewing-article/GUIDE.md**
    - 三轮分离式审校方法
    - 问题分级系统
    - 审校日志模板
